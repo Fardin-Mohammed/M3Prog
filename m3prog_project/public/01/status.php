@@ -1,0 +1,33 @@
+<?php
+$status = "offline";
+echo $status;
+$status = "available";
+echo "<br/>";
+echo $status;
+$status = "busy";
+echo "<br/>";
+echo $status;
+$status = "do not disturb";
+echo "<br/>";
+echo $status;
+$status = "offline";
+echo "<br/>";
+echo "<br/>";
+$prijs = "20.5";
+echo $prijs;
+$prijs = "21,0";
+echo "<br/>";
+echo $prijs;
+$prijs = "21.5";
+echo "<br/>";
+echo $prijs;
+$prijs = "22.0";
+echo "<br/>";
+echo $prijs;
+$prijs = "22.5";
+echo "<br/>";
+echo $prijs;
+$prijs = "23.0";
+echo "<br/>";
+echo $prijs;
+?>
