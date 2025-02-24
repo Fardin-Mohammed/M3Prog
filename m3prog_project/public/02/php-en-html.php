@@ -18,4 +18,4 @@ $auteur = 'Fardin-Mohammed';
         <h2>Auteur: <?= $auteur;?></h2>
     </section>
 </body>
-</html>
+</html> 
