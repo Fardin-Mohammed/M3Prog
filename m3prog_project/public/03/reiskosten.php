@@ -1,24 +1,22 @@
 <?php
-$afstand = 1078.56; 
-$prijs_per_liter = 1.89; 
-$treinkosten = 60; 
+$afstand = 942.50; 
+$benzinePerKm = 1 / 15; 
 $tankinhoud = 50; 
-$km_per_liter = 15; 
+$benzinePrijs = 1.89; 
+$treinKosten = 60; 
 
-$liter_benzine = $afstand / $km_per_liter;
-$aantal_tankbeurten = ceil($liter_benzine / $tankinhoud);
-$autokosten = $liter_benzine * $prijs_per_liter; 
+$litersNodig = $afstand * $benzinePerKm;
+$aantalTankbeurten = ceil($litersNodig / $tankinhoud);
+$totaleKostenAuto = $litersNodig * $benzinePrijs;
 
-if ($autokosten > $treinkosten) {
-    $keuze = "Ik ga met de trein.";
+echo "Totale afstand: {$afstand} km<br>";
+echo "Totale prijs auto: €" . number_format($totaleKostenAuto, 2) . "<br>";
+echo "Totaal aantal liter benzine: " . number_format($litersNodig, 2) . " liter<br>";
+echo "Aantal tankbeurten: {$aantalTankbeurten} keer<br>";
+
+if ($totaleKostenAuto > $treinKosten) {
+    echo "Ik ga met de trein.";
 } else {
-    $keuze = "Ik ga met de auto.";
+    echo "Ik ga met de auto.";
 }
-
-echo "<h2>Reiskosten Berekening</h2>";
-echo "Totale afstand: $afstand km<br>";
-echo "Totale kosten auto: €" . number_format($autokosten, 2) . "<br>";
-echo "Aantal liter benzine: " . number_format($liter_benzine, 2) . " liter<br>";
-echo "Aantal keren tanken: $aantal_tankbeurten keer<br>";
-echo "<strong>Reisadvies:</strong> $keuze";
 ?>
