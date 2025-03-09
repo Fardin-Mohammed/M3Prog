@@ -1,7 +1,7 @@
 <?php
 
 //R = rood, O= oranje, G = groen
-$stopLichtKleur = 'R';
+$stopLichtKleur = 'G';
 
 ?>
 
@@ -15,19 +15,18 @@ $stopLichtKleur = 'R';
 <body>
     <?php
         // nieuwe php tag
-        if()//als groen
+        if ($stopLichtKleur == 'G')//als groen
         {
-
+            echo "<button style='background-color:#00FF00;height:25px;width:25px;'/>";
         }
-        else if()// als oranje
+        else if ($stopLichtKleur == 'O')// als oranje
         {
-
+            echo "<button style='background-color:#FFA500;height:25px;width:25px;'/>";
         }
         else//als rood
         {
-
+            echo "<button style='background-color:#FF0000;height:25px;width:25px;'/> ";       
         }
-        <button style='background-color:#FF0000;height:25px;width:25px;'/>
     ?>
 </body>
 </html>
