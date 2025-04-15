@@ -12,11 +12,8 @@ $persoon = [
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Persoon info</title>
 </head>
 <body>
-
-
 <table>
     <tr>
         <th>Key</th>
@@ -28,6 +25,5 @@ $persoon = [
     }
     ?>
 </table>
-
 </body>
 </html>
