@@ -1,48 +1,16 @@
 <?php
-class student
-{
-    public $name;
-    public $gemiddeldeCijfer;
-}
 
-class dataObject
-{
-    public $studenten;
-}
+require_once __DIR__ . '/classes.php'; // deze heb ik wel ai anders werkte het niet
 
-$dataObject = new dataObject();
-$dataObject->studenten = [$mario,$bowser,$peach,$wario];
+$klasA = new Klas("4A");
+$klasB = new Klas("4B");
 
+$mario = new Student("Mario", 25, "vuurballen", $klasA);
+$wario = new Student("Wario", 30, "knockback", $klasB);
+$bowser = new Student("Bowser", 40, "vlammen", $klasA);
+$peach = new Student("Peach", 23, "paraplu", $klasB);
 
-// Mario
-$mario = new student();
-$mario->name="mario";
-$mario->$gemiddeldeCijfer=8;
-$mario->$klas="1A";
+$studenten = [$mario, $wario, $bowser, $peach];
 
-// Wario
-
-$wario = new student();
-$wario->name="wario";
-$wario->$gemiddeldeCijfer=9;
-$wario->$klas="1B";
-
-// bowser
-
-$bowser = new student();
-$bowser->name="bowser";
-$bowser->$gemiddeldeCijfer=10;
-$bowser->$klas="1F";
-
-// Peach
-
-$peach = new student();
-$peach->name="peach";
-$peach->$gemiddeldeCijfer=10;
-$peach->$klas="1D";
-
-echo $mario;
-echo $wario;
-echo $bowser;
-echo $peach;
-?>
+header('Content-Type: application/json');
+echo json_encode($studenten, JSON_PRETTY_PRINT);
